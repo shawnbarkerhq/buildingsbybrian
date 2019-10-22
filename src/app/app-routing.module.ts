@@ -21,7 +21,7 @@ const routes: Routes = [
     path: 'states',
     loadChildren: () =>
       import('./continents/continents.module').then(m => m.ContinentsModule)
-  }
+  },
   {
     path: 'cities',
     loadChildren: () =>
