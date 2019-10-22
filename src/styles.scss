@@ -1,6 +1,6 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@import "~@angular/material/theming";
+@import '~@angular/material/theming';
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -31,11 +31,22 @@ $buildingsbybrian-theme: mat-light-theme(
 
 /* You can add global styles to this file, and also import other style files */
 
+:root {
+  --blue: #2196f3;
+  --green: #68bb6a;
+  --light-green: #aed581;
+  --yellow: #ffff00;
+  --orange: #ef6c00;
+  --purple: #4a148c;
+  --red: #e53935;
+  --pink: #f8bbd0;
+  --gray: #e0e0e0;
+}
 html,
 body {
   height: 100%;
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
