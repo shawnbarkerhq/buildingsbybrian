@@ -1,1 +1,49 @@
-<p>cities-dashboard works!</p>
+<section class="cities">
+  <div class="container">
+    <form [formGroup]="cityForm" (ngSubmit)="saveCity()">
+      <mat-form-field appearance="outline">
+        <mat-label>Name of City</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Name of City"
+          formControlName="name"
+          name="name"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Decription</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Description of City"
+          formControlName="description"
+          name="description"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Number of High Rises</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Number of High Rises"
+          formControlName="numberOfHighrises"
+          name="numberOfHighrises"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Country</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Country"
+          formControlName="country"
+          name="country"
+        />
+      </mat-form-field>
+      <button type="submit" mat-button [disabled]="!cityForm.valid">
+        Save City
+      </button>
+    </form>
+  </div>
+</section>
