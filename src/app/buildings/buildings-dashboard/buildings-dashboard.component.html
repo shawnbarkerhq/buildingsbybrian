@@ -1,2 +1,100 @@
-<p>buildings-dashboard works!</p>
-<button mat-raised-button>Button</button>
+<section class="buildings">
+  <div class="container">
+    <form [formGroup]="buildingForm" (ngSubmit)="saveBuilding()">
+      <mat-form-field appearance="outline">
+        <mat-label>Building Name</mat-label>
+        <input
+          matInput
+          type="text"
+          name="name"
+          placeholder="Type building name here"
+          formControlName="name"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <textarea
+          matInput
+          name="decription"
+          id="decription"
+          cols="20"
+          rows="4"
+          placeholder="Decribe the building"
+          formControlName="description"
+        ></textarea>
+      </mat-form-field>
+      <div class="inline-form">
+        <mat-form-field appearance="outline">
+          <mat-label>Height In Meters</mat-label>
+          <input
+            matInput
+            type="text"
+            name="heightInMeters"
+            placeholder="Height In Meters"
+            formControlName="heightInMeters"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Height In Feet</mat-label>
+          <input
+            matInput
+            type="text"
+            name="heightInFeet"
+            placeholder="Height In Feet"
+            formControlName="heightInFeet"
+          />
+        </mat-form-field>
+      </div>
+      <mat-form-field appearance="outline">
+        <mat-select placeholder="Select a status">
+          <mat-option *ngFor="let status of statuses" [value]="status.value">{{
+            status.viewValue
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>City</mat-label>
+        <input
+          matInput
+          type="text"
+          name="city"
+          placeholder="City"
+          formControlName="city"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Country</mat-label>
+        <input
+          matInput
+          type="text"
+          name="country"
+          placeholder="Country"
+          formControlName="country"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Use</mat-label>
+        <input
+          matInput
+          type="text"
+          name="use"
+          placeholder="Use of Building"
+          formControlName="use"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Type</mat-label>
+        <input
+          matInput
+          type="text"
+          name="type"
+          placeholder="Type of Building"
+          formControlName="type"
+        />
+      </mat-form-field>
+      <button mat-button type="submit" [disabled]="!buildingForm.valid">
+        Save Building
+      </button>
+    </form>
+  </div>
+</section>

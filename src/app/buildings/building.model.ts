@@ -1,6 +1,11 @@
-export interface Buildings {
+export interface Building {
   name: string;
-  description: string;
-  height: number;
+  description?: string;
+  heightInMeters: number;
+  heightInFeet: number;
   status: string;
+  city: string;
+  country: string;
+  use?: string;
+  type: string;
 }

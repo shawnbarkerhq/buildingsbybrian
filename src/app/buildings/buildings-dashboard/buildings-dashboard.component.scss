@@ -1,3 +1,29 @@
 button {
-  background-color: var(--green);
+  background-color: var(--pink);
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-form-field {
+  width: 60%;
+}
+
+.inline {
+  display: flex;
+  flex-direction: row;
+}
+
+.inline mat-form-field {
+  width: 40%;
 }
